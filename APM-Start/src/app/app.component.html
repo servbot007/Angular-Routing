@@ -1,15 +1,16 @@
+<span class="fa fa-spinner fa-pulse fa-5x fa-fw" style="position:absolute;top:50%;left:50%;" *ngIf="loading"></span>
 <div>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <a class="navbar-brand">{{pageTitle}}</a>
             <ul class="nav navbar-nav">
-                <li>
+                <li routerLinkActive="active">
                     <a [routerLink]="['/welcome']">Home</a>
                 </li>
-                <li>
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
                     <a [routerLink]="['/products']">Product List</a>
                 </li>
-                <li>
+                <li routerLinkActive="active">
                     <a [routerLink]="['/products', 0, 'edit']">Add Product</a>
                 </li>
             </ul>
